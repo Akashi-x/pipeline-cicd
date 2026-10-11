@@ -1,0 +1,12 @@
+{
+    "name": "akashi-x/pipeline-cicd",
+    "description": "Projet PHP pour pipeline CI/CD",
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    }
+}
