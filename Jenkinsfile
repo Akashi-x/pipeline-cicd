@@ -21,12 +21,14 @@ pipeline {
         }
 
         stage('Analyse SonarQube') {
-            steps {
-                withSonarQubeEnv('SonarQube') {
-                    sh 'sonar-scanner'
-                }
+    steps {
+        withSonarQubeEnv('SonarQube') {
+            withEnv(["PATH+SONAR=${tool 'SonarScanner'}/bin"]) {
+                sh 'sonar-scanner'
             }
         }
+    }
+}
 
         stage('Quality Gate') {
             steps {
