@@ -17,8 +17,7 @@ pipeline {
 
         stage('Tests Unitaires') {
             steps {
-                sh './vendor/bin/phpunit --coverage-clover coverage.xml tests/'
-            }
+                sh './vendor/bin/phpunit --coverage-clover coverage.xml'         }
         }
 
         stage('Analyse SonarQube') {
