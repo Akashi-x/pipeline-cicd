@@ -4,6 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 require_once __DIR__ . '/../src/Calculator.php';
 
+#[\PHPUnit\Framework\Attributes\CoversClass(\Calculator::class)]
 class CalculatorTest extends TestCase {
 
     private $calculator;
